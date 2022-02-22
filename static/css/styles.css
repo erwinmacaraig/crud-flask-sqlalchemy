@@ -1,0 +1,8 @@
+div {
+    border: 1px solid black;
+}
+
+div.field-input {
+    border: none;
+    margin-top: 10px;
+}

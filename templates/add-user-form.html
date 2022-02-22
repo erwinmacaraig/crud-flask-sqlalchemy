@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+{% include 'navigation.html' %}
+    <form method="post" action="{{url_for('test_db')}}">
+        <div class="field-input">
+            <label>First Name</label>
+            <input type="text" name="name">
+        </div>
+        <div class="field-input">
+            <label>Last Name</label>
+            <input type="text" name="lastName">
+        </div>
+        <div class="field-input">
+            <label>Age</label>
+            <input type="text" name="age">
+        </div>
+        <div class="field-input">
+            <input type="submit">
+        </div>
+    </form>
+
+
+</body>
+</html>

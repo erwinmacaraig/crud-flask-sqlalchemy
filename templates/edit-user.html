@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+
+</head>
+<body>
+{% include 'navigation.html' %}
+
+<form method="post" action="{{url_for('edit_user', id=user.id)}}">
+        <div class="field-input">
+            <label>First Name</label>
+            <input type="text" name="name" value="{{user.name}}">
+        </div>
+        <div class="field-input">
+            <label>Last Name</label>
+            <input type="text" name="lastName" value="{{user.lastName}}">
+        </div>
+        <div class="field-input">
+            <label>Age</label>
+            <input type="text" name="age" value="{{user.age}}">
+        </div>
+        <div class="field-input">
+            <input type="submit">
+        </div>
+    </form>
+</body>
+</html>
