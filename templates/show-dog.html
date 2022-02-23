@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Call Dog API using AJAX</title>
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div>
+        <img src="" alt="Dog" id="img-dog">
+    </div>
+  <div>
+    <button type="button" onclick="getMeADog(); return false;">Load Dog</button>
+  </div>
+</body>
+</html>

@@ -1,5 +1,7 @@
 from flask import render_template, url_for, redirect, request
 from models import db, User, app
+
+
 # Flask,
 # app = Flask(__name__)
 
@@ -8,9 +10,15 @@ def index():
     destinations = ['Boracay', 'Hundred Islands', 'Villa Escudero']
     return render_template('index.html', dest=destinations)
 
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('/dog-api-call')
+def dog_ceo_api():
+    return render_template('show-dog.html')
 
 
 @app.route('/test-db', methods=['POST'])
@@ -21,7 +29,6 @@ def test_db():
     db.session.add(new_user)
     db.session.commit()
     return redirect(url_for('retrieve_users'))
-
 
 
 @app.route('/add-user-form')
